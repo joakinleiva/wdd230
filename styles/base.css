@@ -1,11 +1,9 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BASE STYLES */
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -75,7 +73,6 @@ footer {
     color: black;
 }
 
-/* MAIN CONTENT */
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -157,14 +154,12 @@ main {
     color: #333;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
@@ -192,7 +187,7 @@ footer {
     }
 }
 
-/* WEB VERSION STYLES */
+
 @media (min-width: 769px) {
     .card-container {
         grid-template-columns: 2fr 1fr;
