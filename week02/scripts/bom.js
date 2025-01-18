@@ -5,7 +5,7 @@ const list = document.querySelector('#list');
 button.addEventListener('click', addItem);
 input.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Evita que la tecla Enter se procese de otra manera
+        event.preventDefault(); // Prevents Enter key to be procesed otherwisemanera
         addItem();
     }
 });
