@@ -41,3 +41,35 @@ h2 {
         .color-palette div {
             text-align: center;
         }
+
+#latofont {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-demo {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style:normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  .img-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Cambia a 'cover' si prefieres que la imagen cubra todo el contenedor */
+}
+
+@media (max-width: 768px) {
+    .img-container {
+      width: 100%;
+    }
+  }
