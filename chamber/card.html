@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .card-container {
+            width: 120px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .card-content {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: #007bff;
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container" id="dynamicCard">
+    <a href="#" id="cardLink"></a>
+    <h3 class="card-title" id="cardTitle">Title 1</h3>
+    <p class="card-content" id="cardContent">Lorem ipsum dolor sit amet.</p>
+    <div class="carousel-indicators">
+        <div class="indicator active" data-index="0"></div>
+        <div class="indicator" data-index="1"></div>
+        <div class="indicator" data-index="2"></div>
+    </div>
+</div>
+
+<script>
+    const cards = [
+        {
+            title: "Title 1",
+            content: "Lorem ipsum dolor sit amet.",
+            link: "https://example.com/page1"
+        },
+        {
+            title: "Title 2",
+            content: "Consectetur adipiscing elit.",
+            link: "https://example.com/page2"
+        },
+        {
+            title: "Title 3",
+            content: "Vivamus lacinia odio vitae.",
+            link: "https://example.com/page3"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    const cardTitle = document.getElementById('cardTitle');
+    const cardContent = document.getElementById('cardContent');
+    const cardLink = document.getElementById('cardLink');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function updateCard(index) {
+        cardTitle.textContent = cards[index].title;
+        cardContent.textContent = cards[index].content;
+        cardLink.href = cards[index].link;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+
+    function autoRotate() {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateCard(currentIndex);
+    }
+
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            currentIndex = parseInt(indicator.getAttribute('data-index'));
+            updateCard(currentIndex);
+        });
+    });
+
+    setInterval(autoRotate, 5000);
+
+    updateCard(currentIndex);
+</script>
+
+</body>
+</html>

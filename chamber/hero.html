@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section with Video Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .hero-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 24px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videos = [
+                "images/hero.mp4",
+                "images/hero2.mp4",
+                "images/hero3.mp4"
+            ];
+
+            let currentVideoIndex = 0;
+            const videoElement = document.querySelector(".hero video");
+
+            function playNextVideo() {
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                videoElement.src = videos[currentVideoIndex];
+                videoElement.play();
+            }
+
+            videoElement.addEventListener("ended", playNextVideo);
+            videoElement.src = videos[currentVideoIndex];
+            videoElement.play();
+        });
+    </script>
+</head>
+<body>
+
+<div class="hero">
+    <video autoplay muted>
+        <source src="images/hero.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+
+    <header class="hero-header">
+        <div class="hero-logo">Your Logo</div>
+        <nav class="hero-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero-text">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover amazing content and experiences.</p>
+    </div>
+</div>
+
+</body>
+</html>
