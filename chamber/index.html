@@ -28,7 +28,6 @@
      <meta property="og:type" content="website">
      <meta property="og:image" content="https://www.soccerbible.com/media/153737/messi-2-min.jpg">
      <meta property="og:url" content="https://joakinleiva.github.io/wdd230/index.html">
-
 </head>
 <body>
     <header>
@@ -60,7 +59,33 @@
     <section id="weather" class="weather">WEATHER</section>
     <section id="events" class="events">EVENTS</section>
     <section id="board" class="board">BOARD</section>
-    <section id="contact" class="contact">CONTACT</section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+            
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+    
+    <!-- Modal (Popup) -->
+    <div id="thank-you-modal" class="modal">
+        <div class="modal-content">
+            <h3>Thank you! We'll contact you soon.</h3>
+            <button id="close-modal" class="close-btn">Close</button>
+        </div>
+    </div>
+    
 
     <footer>
         <p>&copy; <span id="year"></span> Joaquin Leiva | Chamber of Commerce</p>
