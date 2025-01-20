@@ -7,6 +7,7 @@
     <meta name="author" content="Joaquin Leiva">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    
 
     <title>Chamber of Commerce</title>
 
@@ -34,46 +35,41 @@
 
 </head>
 <body>
-    <div id="home" class="hero">
-        <video autoplay muted>
+    <header>
+        <div class="logo">
+            <a href="#hero"><img src="images/logo.jpg" alt="Chamber of Commerce"></a>
+        </div>
+        <div class="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#weather">Weather</a>
+            <a href="#events">Events</a>
+            <a href="#board">Board</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div id="hero" class="hero">
+        <video autoplay muted loop>
             <source src="images/hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
-        <header class="hero-header">
-            <div class="hero-logo">
-                <img src="images/logo.jpg" alt="Chamber of Commerce">
-            </div>
-            <nav class="hero-nav">
-                <a href="#home">Home</a>
-                <a href="#weather">Weather</a>
-                <a href="#events">Events</a>
-                <a href="#board">Board</a>
-                <a href="#contacts">Contacts</a>
-            </nav>
-        </header>
-        <div class="hero-text">
-            <h1>La Serena Chamber of Commerce</h1>
-            <p>Our mission is to help your business grow.</p>
-        </div>
+        <h1>HERO VIDEO</h1>
     </div>
 
-    <main>
-        <section id="weather" class="section weather">
-            <h2>Weather</h2>
-        </section>
-        <section id="events" class="section events">
-            <h2>Events</h2>
-        </section>
-        <section id="board" class="section board">
-            <h2>Board</h2>
-        </section>
-        <section id="contacts" class="section contacts">
-            <h2>Contacts</h2>
-        </section>
-    </main>
+    <section id="weather" class="weather">WEATHER</section>
+    <section id="events" class="events">EVENTS</section>
+    <section id="board" class="board">BOARD</section>
+    <section id="contact" class="contact">CONTACT</section>
 
-    <footer class="footer">
-        <p>&copy; 2025 La Serena Chamber of Commerce. All rights reserved.</p>
+    <footer>
+        <p>&copy; <span id="year"></span> Joaquin Leiva | Chamber of Commerce</p>
+        <p class="modification">Last modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
