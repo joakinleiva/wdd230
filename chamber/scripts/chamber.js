@@ -41,4 +41,28 @@ closeModalBtn.addEventListener('click', function() {
     form.reset();
 });
 
+//Get Dates
 
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function updateDateTime() {
+    const now = new Date();
+    const dateTimeString = now.toLocaleString();
+    document.getElementById("lastModified").textContent = dateTimeString;
+}
+
+// Update 
+updateDateTime();
+
+
+//Burger
+
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const nav = document.querySelector("nav");
+
+    burgerMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+});
