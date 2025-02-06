@@ -8,3 +8,13 @@ function updateDateTime() {
 
 // Update 
 updateDateTime();
+
+
+
+//Counter
+
+const counter = document.querySelector("#counter");
+let counterTimes = Number(localStorage.getItem("counter")) || 0;
+counter.textContent = counterTimes;
+counterTimes++;
+localStorage.setItem("counter", counterTimes);
