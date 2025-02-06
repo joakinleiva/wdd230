@@ -9,7 +9,7 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         
         <!-- CSS -->
-        <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+        
         <link rel="stylesheet" href="styles/base.css">
         <!-- <link rel="stylesheet" href="styles/larger.css"> -->
     
@@ -33,7 +33,7 @@
     <!-- HEADER -->
     <header class="main-header">
         <div class="profile-picture">
-            <img src="images/profile.jpg" alt="Joaquin Leiva" width="90" height="120">
+            <img src="images/profile.webp" alt="Joaquin Leiva" width="90" height="120">
             <span>Joaquin Leiva</span>
         </div>
     </header>
@@ -51,6 +51,21 @@
     <!-- MAIN -->
     <main>
         <div class="content">
+            <!-- TEMPLE -->
+            <div>
+                <picture>
+                    <source srcset="hero-small.jpg" media="(max-width: 400px)">
+                    <source srcset="hero-large.jpg" media="(min-width: 401px) and (orientation: landscape)">
+                    <img src="hero-large.jpg" alt="Imagen del templo">
+                </picture>
+            
+            </div>
+
+            <!-- MAP -->
+             <div class="city-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110673.77920226635!2d-71.32685038012035!3d-29.905903140283918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691ca649389f3c9%3A0x8a1787b3d1d84ccb!2sLa%20Serena%2C%20Coquimbo!5e0!3m2!1ses-419!2scl!4v1738816892771!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+
             <h1>WDD 230: Web Frontend Development</h1>
             
             <!-- LEARNING ACTIVITIES -->

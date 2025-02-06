@@ -160,6 +160,12 @@ footer {
     font-size: 0.9rem;
 }
 
+
+
+.city-map {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
