@@ -166,6 +166,10 @@ footer {
     width: 100%;
 }
 
+.temple-image {
+    object-fit: cover;
+}
+
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
