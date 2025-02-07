@@ -1,3 +1,10 @@
+:root {
+    --background-color: #0d00fe;
+    
+        font-weight: 400;
+    
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; 
     font-weight: 400;
     color: #333;
     line-height: 1.6;
@@ -17,7 +24,7 @@ body {
 
 .main-header,
 footer {
-    background-color: #0d00fe;
+    background-color: var(--background-color);
     color: white;
     width: 100%;
 }
@@ -87,9 +94,117 @@ main {
 .content {
     width: 100%;
     max-width: 1200px;
-   
     text-align: center;
 }
+
+
+
+/* DISCOVER */
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* GALERÍA */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.gallery-container picture {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-container picture img {
+    width: 80%;
+    display: block;
+}
+
+.gallery-container picture::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1); 
+    color: black;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-container picture:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.gallery-container img {
+    width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para distribuir mejor el contenido */
+}
+
+.sidebar h2,
+.sidebar h3 {
+    color: #0d00fe;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .card-container {
     display: grid;
@@ -115,7 +230,7 @@ main {
 }
 
 .card-title {
-    background-color: #0d00fe;
+    background-color: var(--background-color);
     color: white;
     padding: 0.5rem;
     position: absolute;
@@ -157,6 +272,8 @@ main {
 }
 
 footer {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
@@ -179,8 +296,8 @@ footer {
     padding: 0.3rem;
     margin: 0;
 	font-size: 1.67rem;
-	font-family: "Roboto", sans-serif;
-    font-weight: 400;
+	font-family: var(--font-family)
+    
 }
 
 
@@ -212,6 +329,16 @@ footer {
 
 
 @media (max-width: 768px) {
+    .discover-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr; 
+    }
+}
+    
+    
     main {
         grid-template-columns: 1fr;
         padding: 1rem;
@@ -236,7 +363,9 @@ footer {
         margin: 0 auto;
         padding: 1rem;
     }
-}
+
+
+
 
 
 @media (min-width: 769px) {

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joaquin Leiva - WDD 230 - Web Frontend Development</title>
+        <meta name="description" content="WDD 230 - Web Frontend Development course. Joaquin Leiva">
+        <meta name="author" content="Joaquin Leiva">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        
+        <!-- CSS -->
+        
+        <link rel="stylesheet" href="styles/base.css">
+        <!-- <link rel="stylesheet" href="styles/larger.css"> -->
+    
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- JS -->
+        <script src="scripts/getDates.js" defer></script>
+    
+        <!-- META -->
+        <meta property="og:title" content="My journey through WDD230">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://www.soccerbible.com/media/153737/messi-2-min.jpg">
+        <meta property="og:url" content="https://joakinleiva.github.io/wdd230/index.html">
+
+</head>
+    
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="profile-picture">
+            <img src="images/profile.webp" alt="Joaquin Leiva" width="90" height="120">
+            <span>Joaquin Leiva</span>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="main-menu">
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="discover-grid">
+
+        <!-- IMAGE GALLERY -->
+        <section class="gallery">
+            <h2>Local Attractions</h2>
+            <div class="gallery-container">
+                <picture>
+                    <img src="images/inglesa.webp" alt="English Bay Beach" loading="lazy">
+                </picture>
+                <picture>
+                    <img src="images/valley-night-1.webp" alt="Pisco Elqui Night Sky" loading="lazy">
+                </picture>
+                <picture>
+                    <img src="images/la-serena-playa.webp" alt="La Serena Beach" loading="lazy">
+                </picture>
+                <picture>
+                    <img src="images/tongoy-playa.webp" alt="Tongoy Beach" loading="lazy">
+                </picture>
+                <picture>
+                    <img src="images/valley.webp" alt="Elqui's Valley" loading="lazy">
+                </picture>
+                <picture>
+                    <img src="images/valley-night-2.webp" alt="Atacama Night Sky" loading="lazy">
+                </picture>
+
+            </div>
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>Visitor Info</h2>
+            <p id="counter"></p>
+            <span id="visit-message"></span>
+
+            <h3>Event Calendar</h3>
+            <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York" 
+                style="border: 0" 
+                width="100%" 
+                height="300" 
+                frameborder="0" 
+                scrolling="no">
+            </iframe>
+
+            <h3>City Demographics</h3>
+            <p>Population: 200,000</p>
+            <p>Founded: 1710</p>
+            <p>Weather: ☀️ Sunny, 22°C</p>
+        </aside>
+    </main>
+
+
+    
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span> Joaquin Leiva | Argentina</p>
+        <p class="modification">Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
