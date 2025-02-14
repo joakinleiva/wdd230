@@ -1,0 +1,28 @@
+{
+    "family_name": "Johnson",
+    "move_in_date": "2025-02-14",
+    "number_of_members": 5,
+    "visited_by_bishopric": false,
+    "family_members": [
+        {
+            "name": "Carl",
+            "gender": "Male",
+            "birthdate":"1995-03-11"
+        },
+        {
+            "name": "Mallory",
+            "gender": "Female",
+            "birthdate":"1994-06-21"
+        },
+        {
+            "name": "James",
+            "gender": "Male",
+            "birthdate":"2015-03-21"
+        },
+        {
+            "name": "Hailey",
+            "gender": "Female",
+            "birthdate":"2016-12-24"
+        }
+    ]
+}
