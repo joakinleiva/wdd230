@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Joaquin Leiva - WDD 230 - Web Frontend Development</title>
+        <meta name="description" content="WDD 230 - Web Frontend Development course. Joaquin Leiva">
+        <meta name="author" content="Joaquin Leiva">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        
+        <!-- CSS -->
+        
+        <link rel="stylesheet" href="styles/base.css">
+        <!-- <link rel="stylesheet" href="styles/larger.css"> -->
+    
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- JS -->
+        <script src="scripts/getDates.js" defer></script>
+    
+        <!-- META -->
+        <meta property="og:title" content="My journey through WDD230">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://www.soccerbible.com/media/153737/messi-2-min.jpg">
+        <meta property="og:url" content="https://joakinleiva.github.io/wdd230/index.html">
+
+</head>
+    
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="profile-picture">
+            <img src="images/profile.webp" alt="Joaquin Leiva" width="90" height="120">
+            <span>Joaquin Leiva</span>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="main-menu">
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <form action="thankyou.html" method="get">
+            <label for="firstName">First Name
+                <input type="text" id="firstName" name="firstName" required>
+            </label>
+
+            <label for="lastName">Last Name
+                <input type="text" id="lastName" name="lastName" required>
+            </label>
+
+            <label for="title">Title/Position
+                <input type="text" id="title" name="title" pattern="[A-Za-z\-\s]{7,}" required placeholder="e.g., Marketing Manager">
+            </label>
+
+            <label for="email">Email Address
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+            </label>
+
+            <label for="phone">Mobile Phone
+                <input type="tel" id="phone" name="phone" required placeholder="e.g. +1 (385) 555-1234">
+            </label>
+
+            <label for="organization">Business/Organization Name
+                <input type="text" id="organization" name="organization" required>
+            </label>
+
+            <label for="membership">Membership Level
+                <select id="membership" name="membership" required>
+                    <option value="" disabled selected>Select a membership level...</option>
+                    <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label for="description">Business/Organization Description
+                <textarea id="description" name="description"></textarea>
+            </label>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+            
+            <input type="submit" value="Submit Application">
+        </form>
+    </main>
+    
+ 
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span> Joaquin Leiva | Argentina</p>
+        <p class="modification">Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
