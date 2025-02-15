@@ -5,6 +5,27 @@
     
 }
 
+#fig-caption {
+    text-transform: capitalize;
+}
+
+#weather-info {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    height: 100%;
+}
+
+#weather-info p {
+    display: flex;
+    align-items: center;
+    margin: 0; 
+}
+
+#weather-icon {
+    margin-right: 8px;
+}
+
 * {
     margin: 0;
     padding: 0;
