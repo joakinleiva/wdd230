@@ -1,8 +1,8 @@
 :root {
     --background-color: #0d00fe;
-    
-        font-weight: 400;
-    
+    --font-family: "Roboto", serif;
+    --background-color: #003057;
+    --font-weight: 400;
 }
 
 #fig-caption {
@@ -113,6 +113,15 @@ main {
     text-align: center;
     overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
 
 .content {
     width: 100%;
