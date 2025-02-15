@@ -111,7 +111,7 @@ footer {
 
 }
 
-section {
+#cards section {
     background-color: rgba(3, 34, 58, 0.496);
     padding: 8px;
     border-color: 1px solid #f4f4f4;
@@ -120,20 +120,20 @@ section {
 
 }
 
-section:hover {
+#cards #cards section:hover {
     transform: scale(1.05); /* Slight zoom */
 }
 
-section p {
+#cards section p {
      color: white;
 }
 
-img {
+#cards img {
     max-width: 100%;
     height: auto;
 }
 
-h2 {
+#cards h2 {
     font-family: var(--font-family);
     color: white;
     padding: 5px;
