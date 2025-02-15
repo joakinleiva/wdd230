@@ -1,0 +1,70 @@
+{
+    "weeks": [
+        {
+          "week": "Week 1",
+          "links": [
+            {
+              "url":"week01/grail.html",
+              "title":"HG Layout"
+            },
+            {
+              "url":"week01/mqueries.html",
+              "title":"mQueries"
+            }
+          ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {
+            "url": "week2/design",
+            "title": "Design"
+          },
+          {
+            "url": "week2/learning-activity-2.html",
+            "title": "CSS Layout Techniques"
+          }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {
+            "url": "week3/learning-activity-1.html",
+            "title": "JavaScript Fundamentals"
+          },
+          {
+            "url": "week3/learning-activity-2.html",
+            "title": "Functions in JavaScript"
+          }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {
+            "url": "week4/learning-activity-1.html",
+            "title": "Responsive Design with CSS"
+          },
+          {
+            "url": "week4/learning-activity-2.html",
+            "title": "Mobile-First Approach"
+          }
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          {
+            "url": "week5/learning-activity-1.html",
+            "title": "Advanced JavaScript Concepts"
+          },
+          {
+            "url": "week5/learning-activity-2.html",
+            "title": "Asynchronous Programming"
+          }
+        ]
+      }
+    ]
+  }
+  

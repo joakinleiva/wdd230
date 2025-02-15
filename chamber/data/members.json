@@ -1,0 +1,86 @@
+{
+    "companies": [
+      {
+        "name": "Google",
+        "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+        "phone_number": "+1-650-253-0000",
+        "website": "https://www.google.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+        "membership_level": "Gold",
+        "other_info": "A global leader in internet services and products, including search, cloud computing, advertising, and more."
+      },
+      {
+        "name": "Tesla",
+        "address": "3500 Deer Creek Road, Palo Alto, CA 94304, USA",
+        "phone_number": "+1-650-681-5000",
+        "website": "https://www.tesla.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+        "membership_level": "Platinum",
+        "other_info": "Innovative electric vehicle and energy storage company led by Elon Musk."
+      },
+      {
+        "name": "Amazon",
+        "address": "410 Terry Avenue North, Seattle, WA 98109-5210, USA",
+        "phone_number": "+1-206-266-1000",
+        "website": "https://www.amazon.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+        "membership_level": "Platinum",
+        "other_info": "E-commerce giant and technology company, also a leader in cloud computing services with Amazon Web Services (AWS)."
+      },
+      {
+        "name": "Microsoft",
+        "address": "One Microsoft Way, Redmond, WA 98052-6399, USA",
+        "phone_number": "+1-425-882-8080",
+        "website": "https://www.microsoft.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png",
+        "membership_level": "Gold",
+        "other_info": "Tech corporation specializing in software, hardware, and cloud computing services, including Windows and Office products."
+      },
+      {
+        "name": "Apple",
+        "address": "1 Apple Park Way, Cupertino, CA 95014, USA",
+        "phone_number": "+1-408-996-1010",
+        "website": "https://www.apple.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/488px-Apple_logo_black.svg.png",
+        "membership_level": "Gold",
+        "other_info": "Leading company in consumer electronics, software, and digital services, known for the iPhone, iPad, and MacBook."
+      },
+      {
+        "name": "Facebook (Meta)",
+        "address": "1 Hacker Way, Menlo Park, CA 94025, USA",
+        "phone_number": "+1-650-308-7300",
+        "website": "https://www.meta.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/800px-Meta_Platforms_Inc._logo.svg.png",
+        "membership_level": "Silver",
+        "other_info": "Social media conglomerate that owns Facebook, Instagram, WhatsApp, and Oculus."
+      },
+      {
+        "name": "Adobe",
+        "address": "345 Park Avenue, San Jose, CA 95110-2704, USA",
+        "phone_number": "+1-408-536-6000",
+        "website": "https://www.adobe.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/512px-Adobe_Corporate_logo.svg.png",
+        "membership_level": "Gold",
+        "other_info": "Software company known for products like Photoshop, Illustrator, and Acrobat."
+      },
+      {
+        "name": "Spotify",
+        "address": "Regeringsgatan 19, 111 53 Stockholm, Sweden",
+        "phone_number": "+46 8 506 050 00",
+        "website": "https://www.spotify.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/512px-Spotify_icon.svg.png",
+        "membership_level": "Silver",
+        "other_info": "Music streaming service offering a vast library of music and podcasts."
+      },
+      {
+        "name": "Netflix",
+        "address": "100 Winchester Circle, Los Gatos, CA 95032, USA",
+        "phone_number": "+1-408-540-3700",
+        "website": "https://www.netflix.com",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+        "membership_level": "Gold",
+        "other_info": "Streaming service offering a wide variety of television shows, movies, documentaries, and original content."
+      }
+    ]
+  }
+  
