@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("lastVisit", now);
 });
 
-// Time in La Serena
 
+// Time in La Serena
 function getLaSerenaTime() {
     const now = new Date();
     const options = {
-        timeZone: 'Chile/Continental',
+        timeZone: 'America/Santiago',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
@@ -64,9 +64,8 @@ function getLaSerenaTime() {
         month: 'long',
         day: 'numeric'
     };
-    const formatter = new Intl.DateTimeFormat('en-US', options);
-    const laSerenaTime = formatter.format(now);
-    const timeElement = document.getElementById('laserena-time');  // Ensure the element exists
+    const laSerenaTime = new Intl.DateTimeFormat('en-US', options).format(now);
+    const timeElement = document.getElementById('laserena-time');
 
     if (timeElement) {
         timeElement.textContent = `Current time in La Serena, Chile: ${laSerenaTime}.`;
@@ -77,35 +76,80 @@ function getLaSerenaTime() {
 
 getLaSerenaTime();
 
-// Weather
-
+// Weather Data
 const currentTemp = document.getElementById('current-temp');
 const weatherIcon = document.getElementById('weather-icon');
 const captionDesc = document.getElementById('fig-caption'); 
+const forecastContainer = document.getElementById('forecast');  // Ensure you have an element with id="forecast" in HTML
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-29.9027&lon=-71.2502&appid=f80c45a071955f4b4196f7a03bca2788&units=imperial';
+const apiKey = 'f80c45a071955f4b4196f7a03bca2788';
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=-29.9027&lon=-71.2502&appid=${apiKey}&units=metric`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=-29.9027&lon=-71.2502&appid=${apiKey}&units=metric`;
 
-async function apiFetch() {
+async function fetchWeather() {
     try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            displayResults(data); 
-        } else {
-            throw Error(await response.text());
-        }
+        const response = await fetch(weatherUrl);
+        if (!response.ok) throw new Error(`Weather API error: ${response.status}`);
+        
+        const data = await response.json();
+        displayWeather(data);
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
-apiFetch();
-
-function displayResults(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    let desc = data.weather[0].description;
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
-    captionDesc.textContent = ` ${desc}`;
+async function fetchForecast() {
+    try {
+        const response = await fetch(forecastUrl);
+        if (!response.ok) throw new Error(`Forecast API error: ${response.status}`);
+        
+        const data = await response.json();
+        displayForecast(data);
+    } catch (error) {
+        console.error(error);
+    }
 }
+
+function displayWeather(data) {
+    currentTemp.innerHTML = `${data.main.temp.toFixed(1)}°C`;
+    const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    let desc = data.weather[0].description;
+    
+    weatherIcon.setAttribute('src', iconSrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = desc.charAt(0).toUpperCase() + desc.slice(1);
+}
+
+function displayForecast(data) {
+    const dailyTemps = {};
+    
+    // Extracting data every 24 hours at 12:00 PM
+    data.list.forEach((entry) => {
+        const date = entry.dt_txt.split(" ")[0]; // Get only the date part
+        if (!dailyTemps[date] && entry.dt_txt.includes("12:00:00")) {
+            dailyTemps[date] = {
+                temp: entry.main.temp.toFixed(1),
+                icon: entry.weather[0].icon,
+                description: entry.weather[0].description
+            };
+        }
+    });
+
+    // Get only the next 3 days
+    const forecastDays = Object.keys(dailyTemps).slice(0, 3);
+
+    forecastContainer.innerHTML = forecastDays.map(date => {
+        const { temp, icon, description } = dailyTemps[date];
+        return `
+            <div class="forecast-item">
+                <p><strong>${new Date(date).toLocaleDateString('en-US', { weekday: 'long' })}</strong></p>
+                <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}">
+                <p>${temp}°C - ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
+            </div>
+        `;
+    }).join('');
+}
+
+// Call the functions
+fetchWeather();
+fetchForecast();
