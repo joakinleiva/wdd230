@@ -41,20 +41,6 @@ closeModalBtn.addEventListener('click', function() {
     form.reset();
 });
 
-//Get Dates
-
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-function updateDateTime() {
-    const now = new Date();
-    const dateTimeString = now.toLocaleString();
-    document.getElementById("lastModified").textContent = dateTimeString;
-}
-
-// Update 
-updateDateTime();
-
 
 //Burger
 
@@ -218,7 +204,7 @@ fetchForecast();
 
 // Rotate
 window.addEventListener('load', () => {
-    gsap.to(".image img", { opacity: 1, rotation: 360, duration: 1, stagger: 0.2 });
+    gsap.to(".image img, section", { opacity: 1, rotation: 360, duration: 1, stagger: 0.2 });
 });
 // Title
 window.addEventListener('load', () => {
@@ -318,6 +304,17 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function updateDateTime() {
+    const now = new Date();
+    const dateTimeString = now.toLocaleString();
+    document.getElementById("lastModified").textContent = dateTimeString;
+}
+
+// Update 
+updateDateTime();
 
 const members = 'data/members.json';
 const cards = document.querySelector('#cards');
