@@ -21,6 +21,9 @@
      
      <script src="scripts/chamber.js" defer></script>
 
+     <!-- GSAP Library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" defer></script>
+
      <!-- META -->
      <meta property="og:title" content="My journey through WDD230">
      <meta property="og:type" content="website">
@@ -51,7 +54,7 @@
             <source src="images/hero.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
-        <h1>La Serena Chamber of Commerce</h1>
+        <h1 class="page-title">La Serena Chamber of Commerce</h1>
     </div>
 
     <section id="weather" class="weather">
@@ -75,10 +78,14 @@
             </section>
         </div>
     </section>
-    <section id="events" class="events">EVENTS</section>
+
+    <!-- EVENTS -->
+    <section id="events" class="events">
+        <div id="cards"></div>
+    </section>
     <section id="board" class="board">BOARD</section>
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
+        <h2 class="page-title">CONTACT US</h2>
         <form class="contact-form">
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
@@ -104,6 +111,17 @@
         </div>
     </div>
     
+    <!-- Partners-->
+    <div class="clients-section">
+        <h1 class="page-title">Our Partners</h1>
+    
+        
+        <div class="client-logos-container">
+            <div class="client-logos-wrapper">
+            
+            </div>
+        </div>
+    </div>  
 
     <footer>
         <p>&copy; <span id="year"></span> Joaquin Leiva | Chamber of Commerce</p>
