@@ -65,78 +65,55 @@ nav a:hover {
     margin: 3px 0;
 }
 
-.main-header {
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    display: flex;
+#cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 16px;
+    align-content:center ;
+    display: grid;
 }
     
-.main-header .profile-picture {
-    align-items: center;
-    gap: 10px;
-    display: flex;
+#cards section {
+    padding: 8px;
+    border-color: #f4f4f4;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5);
 }
     
-    .main-header .profile-picture img {
-        width: 80px;
-        height: 80px;
-    }
+#cards #cards section:hover {
+    transform: scale(1.05); /* Slight zoom */
+}
     
-    .main-menu {
-        width: 100%;
-        background-color:var(--background-color);
-    }
+#cards section p {
+    font-weight: 200;
+    color: white;
+}
 
-    #cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
-        padding: 16px;
+#cards img {
+    height: auto;
+    align-content: center;
+    max-width: 100%;
+}
     
-    }
+#cards h2 {
+    color: white;
+    padding: 5px;
+    font-family: "Roboto" , serif;
+    font-weight: 200;
+}
     
-    #cards section {
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 8px;
-        border-color: 1px solid #f4f4f4;
-        text-align: center;
-        transition: transform 0.3s ease;
-    
-    }
-    
-    #cards #cards section:hover {
-        transform: scale(1.05); /* Slight zoom */
-    }
-    
-    #cards section p {
-        color: white;
-        font-weight: 200;
-    }
-    
-    #cards img {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    #cards h2 {
-        font-family: "Roboto" , serif;
-        font-weight: 200;
-        color: white;
-        padding: 5px;
-    }
-    
-   main {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 0 10px;
-        justify-items: center;
-        align-items: center;
-        width: 100%;
-        text-align: center;
-        overflow: hidden;
-    } 
+main {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: grid;
+} 
 
 /* CARD */
 .card-container {
@@ -181,24 +158,24 @@ nav a:hover {
     margin: 0;
 }
     
-    .card p {
-        font-size: 1rem;
-        margin: 0.5rem 0;
-    }
+.card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
     
-    .card ul li {
-        margin: 0.5rem 0;
-    }
+.card ul li {
+    margin: 0.5rem 0;
+}
     
-    .card ul li a {
-        text-decoration: none;
-        color: #0d00fe;
-        transition: color 0.3s;
-    }
-    
-    .card ul li a:hover {
-        color: #333;
-    }
+.card ul li a {
+    color: #0d00fe;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.card ul li a:hover {
+    color: #333;
+}
 
 /* HERO */
 
@@ -260,24 +237,19 @@ nav a:hover {
 }
 
 body {
-     background-color: var(--background-color);
+    background-color: var(--background-color);
 }
 
 /* SECTIONS */
 
 section {
-    
-    padding: 20px;
     display: grid;
     justify-content: center;
     align-items: center;
     font-size: 32px;
     font-weight: bold;
     color: white;
-}
-
-.weather {
-    background: #000000;
+    padding: 20px;
 }
 
 .board {
@@ -406,7 +378,7 @@ footer {
     background-color: #ff7f00;
 }
 
-h1,h3 {
+.modal h1,h3 {
     color: white;
 }
 
