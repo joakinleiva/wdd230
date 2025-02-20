@@ -9,9 +9,7 @@
     <title>Chamber of Commerce</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+  
     <link rel="stylesheet" href="styles/chamber.css">
 
     <!-- FONTS -->
@@ -20,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
      <!-- JS -->
-     <script src="scripts/getDates.js" defer></script>
+     
      <script src="scripts/chamber.js" defer></script>
 
      <!-- META -->
@@ -56,7 +54,27 @@
         <h1>La Serena Chamber of Commerce</h1>
     </div>
 
-    <section id="weather" class="weather">WEATHER</section>
+    <section id="weather" class="weather">
+        <div class="card-container">
+            <section class="card">
+                <h2 class="card-title">Weather and Info</h2>
+                <div id="weather-info">
+                    <p>
+                        <img id="weather-icon" alt="Weather icon">
+                        <span id="current-temp"></span> - <span id="fig-caption"></span>.
+                    </p>
+                </div>
+                <p id="laserena-time"></p>
+                <p>Number of visits: <strong><span id="counter"></span>.</strong></p>
+            </section>
+            
+            <!-- INFORMATION -->
+            <section class="card">
+                <h2 class="card-title">3-Day Forecast</h2>
+                <div id="forecast"></div>
+            </section>
+        </div>
+    </section>
     <section id="events" class="events">EVENTS</section>
     <section id="board" class="board">BOARD</section>
     <section id="contact" class="contact">

@@ -76,12 +76,12 @@ function getLaSerenaTime() {
 
 getLaSerenaTime();
 
-// Weather Data
+//WEATHER
+
 const currentTemp = document.getElementById('current-temp');
 const weatherIcon = document.getElementById('weather-icon');
 const captionDesc = document.getElementById('fig-caption'); 
-const forecastContainer = document.getElementById('forecast');  // Ensure you have an element with id="forecast" in HTML
-
+const forecastContainer = document.getElementById('forecast'); 
 const apiKey = 'f80c45a071955f4b4196f7a03bca2788';
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=-29.9027&lon=-71.2502&appid=${apiKey}&units=metric`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=-29.9027&lon=-71.2502&appid=${apiKey}&units=metric`;
@@ -123,9 +123,8 @@ function displayWeather(data) {
 function displayForecast(data) {
     const dailyTemps = {};
     
-    // Extracting data every 24 hours at 12:00 PM
     data.list.forEach((entry) => {
-        const date = entry.dt_txt.split(" ")[0]; // Get only the date part
+        const date = entry.dt_txt.split(" ")[0];
         if (!dailyTemps[date] && entry.dt_txt.includes("12:00:00")) {
             dailyTemps[date] = {
                 temp: entry.main.temp.toFixed(1),
@@ -135,7 +134,7 @@ function displayForecast(data) {
         }
     });
 
-    // Get only the next 3 days
+    // 3 days
     const forecastDays = Object.keys(dailyTemps).slice(0, 3);
 
     forecastContainer.innerHTML = forecastDays.map(date => {
@@ -150,6 +149,5 @@ function displayForecast(data) {
     }).join('');
 }
 
-// Call the functions
 fetchWeather();
 fetchForecast();

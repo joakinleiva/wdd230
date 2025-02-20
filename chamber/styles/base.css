@@ -93,7 +93,7 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    margin-top: 2rem;
+    margin:10px;
     width: 100%;
     justify-items: center;
 }
